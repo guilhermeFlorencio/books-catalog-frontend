@@ -1,0 +1,6 @@
+<div *ngFor="let book of books">
+    <h3>{{ book?.title }}</h3>
+    <p>{{ book?.author }}</p>
+    <button *ngIf="book.id !== undefined" (click)="deleteBook(book.id)">Delete</button>
+    <a [routerLink]="['/books', book.id]">Details</a>
+</div>
